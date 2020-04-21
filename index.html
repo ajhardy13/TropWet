@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-        <html lang="en">
+        <html>
           <head>
             <meta charset="utf-8">
             <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
@@ -13,33 +13,27 @@
   integrity="sha384-6rCYjRgWDEI2RlZxiVihj1WIZB/uvFiRCGpavTVgFrSPDL0Bk1AiqCW+mmv5h0LP"
   crossorigin="anonymous"></script>
 
-            <style>
-                body { margin:0; padding:0; }
-                body, table, tr, td, th, div, h1, h2, input { font-family: "Calibri", "Trebuchet MS", "Ubuntu", Serif; font-size: 11pt; }
-                #map { position:absolute; top:0; bottom:0; width:100%; } /* full size */
-                .ctl {
-                    padding: 2px 10px 2px 10px;
-                    background: white;
-                    background: rgba(255,255,255,0.9);
-                    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-                    border-radius: 5px;
-                    text-align: right;
-                }
-                .title {
-                    font-size: 18pt;
-                    font-weight: bold;
-                }
-                .src {
-                    font-size: 10pt;
-                }
-
-            </style>
+           <!-- Position the map and title with Cascading Style Sheet (.css) -->
+  <style>
+  body { margin:0; padding:0; }
+  #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  #map-title { position: relative; margin-top: 10px; margin-left: 50px; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 24px; z-index: 800; }
+  </style>
 
         </head>
         <body>
 
         <div id="map"></div>
 
+		        // Map
+        var map = L.map('map', {
+            center: [-2.1136488503393465, 30.23917689215634],
+            zoom: 12,
+            minZoom: 1,
+            maxZoom: 12,
+            layers: [osm]
+        });
+		
         <script>
         /* **** Leaflet **** */
 
@@ -66,14 +60,7 @@
 			
         var lyr2 = L.tileLayer('./class_tiles/{z}/{x}/{y}.png', {tms: true, opacity: 0.7, attribution: "", minZoom: 1, maxZoom: 12});
 
-        // Map
-        var map = L.map('map', {
-            center: [-2.1136488503393465, 30.23917689215634],
-            zoom: 12,
-            minZoom: 1,
-            maxZoom: 12,
-            layers: [osm]
-        });
+
 
         var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner, "Without background": white, "Terrain": terrain}
         var overlaymaps = {"Fractions": lyr, "Classified": lyr2}
