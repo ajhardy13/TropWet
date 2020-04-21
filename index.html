@@ -13,7 +13,7 @@
   integrity="sha384-6rCYjRgWDEI2RlZxiVihj1WIZB/uvFiRCGpavTVgFrSPDL0Bk1AiqCW+mmv5h0LP"
   crossorigin="anonymous"></script>
 
-           <!-- Position the map and title with Cascading Style Sheet (.css) -->
+  <!-- Position the map and title with Cascading Style Sheet (.css) -->
   <style>
   body { margin:0; padding:0; }
   #map { position: absolute; top:0; bottom:0; right:0; left:0; }
@@ -22,7 +22,7 @@
 
         </head>
         <body>
-
+<div id="map-title">EDIT your map title</div>
         <div id="map"></div>
 		
         <script>
@@ -31,10 +31,7 @@
 				        // Map
         var map = L.map('map', {
             center: [-2.1136488503393465, 30.23917689215634],
-            zoom: 12,
-            minZoom: 1,
-            maxZoom: 12,
-            layers: [osm]
+            zoom: 12
         });
 		
         // Base layers
