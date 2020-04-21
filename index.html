@@ -24,8 +24,11 @@
         <body>
 
         <div id="map"></div>
+		
+        <script>
+        /* **** Leaflet **** */
 
-		        // Map
+				        // Map
         var map = L.map('map', {
             center: [-2.1136488503393465, 30.23917689215634],
             zoom: 12,
@@ -34,9 +37,6 @@
             layers: [osm]
         });
 		
-        <script>
-        /* **** Leaflet **** */
-
         // Base layers
         //  .. OpenStreetMap
         var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors', minZoom: 1, maxZoom: 12});
