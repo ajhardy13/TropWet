@@ -22,7 +22,7 @@
 
         </head>
         <body>
-<div id="map-title">EDIT your map title</div>
+	<div id="map-title">EDIT your map title</div>
         <div id="map"></div>
 		
         <script>
@@ -31,7 +31,8 @@
 				        // Map
         var map = L.map('map', {
             center: [-2.1136488503393465, 30.23917689215634],
-            zoom: 12
+            zoom: 12,
+	scrollWheelZoom: false
         });
 		
         // Base layers
