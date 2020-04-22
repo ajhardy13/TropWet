@@ -72,11 +72,11 @@
 
         var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner, "Without background": white}
         //var overlaymaps = {"Fractions": lyr, "Classified": lyr2}
-	var overlaymaps = {"Fractions": lyr}
+	//var overlaymaps = {"Fractions": lyr}
 	
 	// Add base layers
-        L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
-	//L.control.layers(basemaps, {collapsed: false}).addTo(map);
+        //L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
+	L.control.layers(basemaps, {collapsed: false}).addTo(map);
 
         // Title
         var title = L.control();
