@@ -43,6 +43,7 @@ font-size: 10pt;
 <div id="map"></div>
 
 <script>
+
 /* **** Leaflet **** */
 
 // Map
@@ -50,11 +51,12 @@ var map = L.map('map', {
 center: [-2.1136488503393465, 30.23917689215634],
 zoom: 12
 });
-	
+
+
 // Base layers
 //  .. OpenStreetMap
 var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors', minZoom: 1, maxZoom: 12}).addTo(map);
-
+	
 //  .. CartoDB Positron
 var cartodb = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>', minZoom: 1, maxZoom: 12});
 
@@ -63,6 +65,10 @@ var toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {att
 
 //  .. White background
 var white = L.tileLayer("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAAA1BMVEX///+nxBvIAAAAH0lEQVQYGe3BAQ0AAADCIPunfg43YAAAAAAAAAAA5wIhAAAB9aK9BAAAAABJRU5ErkJggg==", {minZoom: 1, maxZoom: 12});
+
+	
+
+	
 
 // Overlay layers (TMS)
 var lyr = L.tileLayer('./fractions_tiles/{z}/{x}/{y}.png', {tms: true, opacity: 0.7, attribution: "", minZoom: 1, maxZoom: 12});
