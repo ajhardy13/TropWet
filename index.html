@@ -47,6 +47,12 @@
         <div id="map"></div>
 		
         <script>
+        </head>
+        <body>
+		
+        <div id="map"></div>
+		
+        <script>
         /* **** Leaflet **** */
 
 				        // Map
@@ -83,8 +89,6 @@
 
        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Terrain": terrain, "Stamen Toner": toner, "Without background": white}
         //var overlaymaps = {"Fractions": lyr, "Classified": lyr2}
-       var geojsonFeature = './malaria_rate_barotse_wetseason.geojson'
-       L.geoJSON(geojsonFeature).addTo(map);
 
                // Add base layers
         //L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
